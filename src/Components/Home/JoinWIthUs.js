@@ -5,12 +5,13 @@ const JoinWIthUs = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }, reset
+    formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = async (data) => {
     console.log(data);
-    const url = `http://localhost:8000/vlounteer`;
+    const url = `https://uiu-crowdfounding-apps.herokuapp.com/vlounteer`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -20,13 +21,9 @@ const JoinWIthUs = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-         reset()
+        reset();
       });
-
-    
   };
-  
-
 
   return (
     <div>
@@ -53,7 +50,9 @@ const JoinWIthUs = () => {
               </span>
             </h2>
             <p className="mb-6 text-base text-indigo-100 md:text-lg">
-            Volunteering can help you make friends, learn new skills, advance your career, and even feel happier and healthier.  Learn how to find the right volunteer opportunity for you.
+              Volunteering can help you make friends, learn new skills, advance
+              your career, and even feel happier and healthier. Learn how to
+              find the right volunteer opportunity for you.
             </p>
             <form className="items-center w-full mb-4 md:flex-row md:px-16">
               <label
@@ -212,9 +211,7 @@ const JoinWIthUs = () => {
                         <div className="flex gap-5">
                           <div class="flex items-center pt-3">
                             <input
-                             {...register("day1", {
-
-                           })}
+                              {...register("day1", {})}
                               type="checkbox"
                               value="Saturday"
                               class="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"
@@ -229,9 +226,7 @@ const JoinWIthUs = () => {
                           <div class="flex items-center pt-3">
                             <input
                               type="checkbox"
-                              {...register("day2", {
-
-                              })}
+                              {...register("day2", {})}
                               value="Sunday"
                               class="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"
                             />
@@ -245,9 +240,7 @@ const JoinWIthUs = () => {
                           <div class="flex items-center pt-3">
                             <input
                               type="checkbox"
-                              {...register("day3", {
-
-                              })}
+                              {...register("day3", {})}
                               value="Monday"
                               class="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"
                             />
@@ -261,9 +254,7 @@ const JoinWIthUs = () => {
                           <div class="flex items-center pt-3">
                             <input
                               type="checkbox"
-                              {...register("day4", {
-
-                              })}
+                              {...register("day4", {})}
                               value="Tuesday"
                               class="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"
                             />
@@ -279,9 +270,7 @@ const JoinWIthUs = () => {
                           <div class="flex items-center pt-3">
                             <input
                               type="checkbox"
-                              {...register("day5", {
-
-                              })}
+                              {...register("day5", {})}
                               value="Wednesday"
                               class="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"
                             />
@@ -295,9 +284,7 @@ const JoinWIthUs = () => {
                           <div class="flex items-center pt-3">
                             <input
                               type="checkbox"
-                              {...register("day6", {
-
-                              })}
+                              {...register("day6", {})}
                               value="Thursday"
                               class="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"
                             />
@@ -312,9 +299,7 @@ const JoinWIthUs = () => {
                             <input
                               type="checkbox"
                               value="Friday"
-                              {...register("day7", {
-
-                              })}
+                              {...register("day7", {})}
                               class="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"
                             />
                             <label

@@ -15,7 +15,7 @@ const Loan = () => {
 
   const onSubmit = async (data) => {
     console.log(data);
-    const url = `http://localhost:8000/requestloan`;
+    const url = `https://uiu-crowdfounding-apps.herokuapp.com/requestloan`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -25,8 +25,7 @@ const Loan = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-         reset()
-
+        reset();
       });
   };
   let medical = <span>REQUEST FOR MEDICAL LOAN</span>;
