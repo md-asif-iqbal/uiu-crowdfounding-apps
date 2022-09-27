@@ -15,33 +15,21 @@ const Bennar = () => {
   >
     <div class="max-w-xl text-center sm:text-left">
       <h1 class="text-3xl font-extrabold sm:text-5xl">
-        Let us find your
+      DONATE FOR 
 
         <strong class="block font-extrabold text-rose-700">
-          Forever Home.
+        PEOPLE
         </strong>
       </h1>
 
-      <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
-        tenetur fuga ducimus numquam ea!
+      <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl text-xl">
+      GIVE A HAND TO MAKE THE BETTER WORLD
+
       </p>
-
-      <div class="flex flex-wrap mt-8 text-center gap-4">
-        <a
-          href="#"
-          class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring"
-        >
-          Get Started
-        </a>
-
-        <a
-          href="#"
-          class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring"
-        >
-          Learn More
-        </a>
-      </div>
+      <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
+      We Are Trying To Help The Poor Or Homeless People, The Street Child For Their
+      Better Future & The People Who Are Affected In Different Natural disasters .
+      </p>
     </div>
   </div>
 </section>

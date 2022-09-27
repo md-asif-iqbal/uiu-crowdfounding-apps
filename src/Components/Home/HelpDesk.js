@@ -55,21 +55,22 @@ const HelpDesk = () => {
             class="textarea ml-5 bg-green-100 textarea-accent w-2/3 "
             placeholder="Bio"
           ></textarea>
-          {user ? (
+          <br/>
+          {user ? 
             <button
               type="submit"
-              className="btn bg-green-600 border-0 px-8 mb-5"
+              className="btn bg-green-600 border-0 px-8  mb-5"
             >
               Submit
             </button>
-          ) : (
+           : 
             <button
               type="submit"
               className="btn bg-green-600 border-0 px-8 mb-5"
             >
               <Link to="/login">Submit</Link>
             </button>
-          )}
+          }
         </form>
       </div>
     </div>

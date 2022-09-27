@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-
+import auth from "../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
 const JoinWIthUs = () => {
+  const [user] = useAuthState(auth);
   const {
     register,
     handleSubmit,
@@ -55,12 +58,22 @@ const JoinWIthUs = () => {
               find the right volunteer opportunity for you.
             </p>
             <form className="items-center w-full mb-4 md:flex-row md:px-16">
-              <label
+              {
+                user? <label
                 htmlFor="my-modal-191"
                 className="inline-flex modal-button items-center justify-center w-full h-12 px-12 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-rose-600 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none"
               >
                 Join
-              </label>
+              </label>:
+              <Link to="/login">
+              <label
+              htmlFor="my-modal-191"
+              className="inline-flex modal-button items-center justify-center w-full h-12 px-12 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-rose-600 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none"
+            >
+               Join
+            </label>
+            </Link>
+              }
             </form>
             <input type="checkbox" id="my-modal-191" className="modal-toggle" />
             <div class="flex modal h-screen ">
